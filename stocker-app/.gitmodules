@@ -1,0 +1,3 @@
+[submodule "stocker-core"]
+	path = stocker-core
+	url = https://github.com/CityStockers/stocker-core.git
