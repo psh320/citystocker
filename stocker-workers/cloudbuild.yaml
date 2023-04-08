@@ -1,0 +1,19 @@
+# Docker Build
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["build", "-t", "gcr.io/${PROJECT_ID}/${COMMIT_SHA}", "."]
+  # Docker Push
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/${PROJECT_ID}/${COMMIT_SHA}"]
+  # Update docker image on vm instance
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      [
+        "compute",
+        "instances",
+        "update-container",
+        "instance-2",
+        "--zone",
+        "asia-east2-a",
+        "--container-image=gcr.io/${PROJECT_ID}/${COMMIT_SHA}",
+      ]
