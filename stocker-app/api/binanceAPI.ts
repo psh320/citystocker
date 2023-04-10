@@ -1,7 +1,7 @@
 import axios from "axios";
 import { TradeResult } from "../components/Auto/type";
 import { Price } from "../components/Trade/type";
-const baseUrl = "https://citystocker.shop";
+const baseUrl = "http://localhost:8080";
 //http://localhost:8080
 //https://citystocker.shop
 export const getPrice = async (symbol: string): Promise<Price> => {
