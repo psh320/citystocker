@@ -8,7 +8,6 @@ I wanted people to try practicing the coin trade without loosing any real money.
 
 The customizable algorithm is where you can write the code in code editor provided in the website using the class provided by the website. Without any other settings, you can simply run algorithm trading of your own.
 
----
 
 ## Repository Information
 
